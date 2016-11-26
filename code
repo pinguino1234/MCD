@@ -1,0 +1,28 @@
+int a,b,c,d,e,aux; 
+	cout << "a: "; cin>>a;
+	cout << "b: "; cin>>b;
+	if(b>a){
+		e=b;
+		b=a;
+		a=e;
+	}
+	if(a%b==0)
+		cout << "El resutado ha sido 0 en la primera operacion, el MCD es: " << b;
+	    //cout << "The result has been 0 in the first time, the GCD is: " << b;
+	else{
+		while(d!=0){
+			cout << "a: " << a;
+			cout << "\tb: " << b;
+			c=a/b;
+			d=a%b;
+			a=b;
+			b=d;
+			cout << "\tc: " << c;
+			cout << "\td: " << d;
+			if(d!=0){
+				aux=d;
+			}
+			cout << endl;
+		}
+		cout << "MCD/GCD: " << aux;
+	}
